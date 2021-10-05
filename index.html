@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Restful Application</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">RESTFUL APPLICATION</h1>
+        <h1>Add User</h1>
+        <form action="/addUser" method="post">
+            User ID <input type = "text" id="userid" name="userid" size="20"><br>
+            Name <input type ="text" id="username" name = "username" size="20"><br>
+            DOB <input type ="date" id="dob" name = "dob" size="20"><br>
+            Profession <input type ="text" id="profession" name = "profession" size="20"><br>
+            <button type = "submit" name="submit">
+                Add User
+            </button>
+        </form>
+
+        <h1>Get Specific User Details</h1>
+        <form action="/particularUser" method="post"> 
+            User ID <input type = "text" id="urid" name="urid" size="20"><br>
+            <button type = "submit" name="submit">
+                Get User Info
+            </button>
+        </form>
+
+        <h1>Delete User Details</h1>
+        <form action="/deleteUser" method="post"> 
+            User ID <input type = "text" id="uid" name="uid" size="20"><br>
+            <button type = "submit" name="submit">
+                Delete User
+            </button>
+        </form>
+
+        <h1>Show All User Details</h1>
+        <form action="/showAll" method="get"> 
+            <button type = "submit" name="submit">
+                Show All User Info
+            </button>
+        </form>
+          <h1>push() Array Method</h1>
+          <p id="demo1"></p>
+          <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo1").innerHTML = fruits;
+            
+            function pushArray() {
+              fruits.push("Kiwi");
+              document.getElementById("demo1").innerHTML = fruits;
+            }
+          </script>
+          <button onclick="pushArray()">Click to see the output</button>
+
+          <h1>pop() Array Method</h1>
+          <p id="demo2"></p>
+          <script>
+            const cars = ["jaguar", "toyoto", "maruti", "honda"];
+            document.getElementById("demo2").innerHTML = cars;
+            
+            function popArray() {
+              cars.pop();
+              document.getElementById("demo2").innerHTML = cars;
+            }
+          </script>
+          <button onclick="popArray()">Click to see the output</button>
+
+          <h1>shift() Array Method</h1>
+          <p id="demo3"></p>
+          <script>
+            const places = ["chennai", "mumbai", "bangalore", "hyderabad"];
+            document.getElementById("demo3").innerHTML = places;
+            
+            function shiftArray() {
+              places.shift();
+              document.getElementById("demo3").innerHTML = places;
+            }
+          </script>
+          <button onclick="shiftArray()">Click to see the output</button>
+
+          <h1>splice() Array Method</h1>
+          <p id="demo4"></p>
+          <script>
+            const states = ["chennai", "mumbai", "bangalore", "hyderabad"];
+            document.getElementById("demo4").innerHTML = states;
+            
+            function spliceArray() {
+                states.splice(0, 1);
+              document.getElementById("demo4").innerHTML = states;
+            }
+          </script>
+          <button onclick="spliceArray()">Click to see the output</button>
+
+          <h1>concat() Array Method</h1>
+          <p id="demo5"></p>
+          <p id="demo6"></p>
+          <p id="demo7"></p>
+          <button onclick="concatArray()">Click to see the output</button>
+          <script>
+            const names1 = ["Vinoth", "Krishna"];
+            const names2 = ["Shankar", "Praveen", "Vicky"];
+            document.getElementById("demo5").innerHTML = names1;
+            document.getElementById("demo6").innerHTML = names2;
+            function concatArray(){
+            const merge = names1.concat(names2); 
+            document.getElementById("demo7").innerHTML = merge;
+            }
+          </script>
+          </body>
+</html>
